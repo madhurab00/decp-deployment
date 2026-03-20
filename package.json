@@ -1,0 +1,24 @@
+{
+  "name": "department-engagement-career-platform",
+  "version": "1.0.0",
+  "description": "This document describes the **MongoDB data model** used for the DECP mini project under a **microservices architecture**.",
+  "main": "index.js",
+  "scripts": {
+    "start:services": "concurrently \"npm start --prefix user-service\" \"npm start --prefix content-service\" \"npm start --prefix notification-service\" \"npm start --prefix chat-service\" \"npm start --prefix api-gateway\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishan-kumarasinghe/Department-Engagement-Career-Platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ishan-kumarasinghe/Department-Engagement-Career-Platform/issues"
+  },
+  "homepage": "https://github.com/ishan-kumarasinghe/Department-Engagement-Career-Platform#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

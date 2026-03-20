@@ -1,0 +1,80 @@
+services:
+  - type: web
+    name: decp-user-service
+    runtime: node
+    rootDir: user-service
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: RABBITMQ_URL
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: JWT_EXPIRE
+        value: 15m
+      - key: JWT_REFRESH_EXPIRE_DAYS
+        value: 7
+
+  - type: web
+    name: decp-content-service
+    runtime: node
+    rootDir: content-service
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: RABBITMQ_URL
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+
+  - type: web
+    name: decp-notification-service
+    runtime: node
+    rootDir: notification-service
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: RABBITMQ_URL
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+
+  - type: web
+    name: decp-chat-service
+    runtime: node
+    rootDir: chat-service
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: RABBITMQ_URL
+        sync: false
+      - key: CLIENT_URL
+        sync: false
